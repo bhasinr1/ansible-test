@@ -3,6 +3,10 @@
   tasks:
       - name: echo hostname 
         shell: echo "hostname"
+        register: hstname        
+      - debug: var={{ hstname }}
 
       - name: save in tmp folder
         shell: echo "ifconfig" 
+        register: ipcfg        
+      - debug: var={{ ipcfg }}
