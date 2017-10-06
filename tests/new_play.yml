@@ -1,5 +1,5 @@
 ---
-- hosts: 10.1.11.10
+- hosts: All
   tasks:
       - name: echo hostname 
         shell: echo "hostname"
