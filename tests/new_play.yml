@@ -1,8 +1,8 @@
 ---
 - hosts: localhost
-tasks:
-    - name: echo hostname 
-      shell: echo "hostname"
+  tasks:
+      - name: echo hostname 
+        shell: echo "hostname"
 
-    - name: save in tmp folder
-      shell: echo "hostname" > /tmp/chk.out
+      - name: save in tmp folder
+        shell: echo "hostname" > /tmp/chk.out
