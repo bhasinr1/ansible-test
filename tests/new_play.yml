@@ -5,10 +5,10 @@
         shell: echo "hostname"
         register: hstnameT       
       - set_fact: hstname="{{ hstnameT }}"  
-      - debug: var={{ hstname }}
+      - debug: var=hstname
 
       - name: save in tmp folder
         shell: echo "ifconfig" 
         register: ipcfgT        
       - set_fact: ipcfg="{{ ipcfgT }}"        
-      - debug: var={{ ipcfg }}
+      - debug: var=ipcfg
