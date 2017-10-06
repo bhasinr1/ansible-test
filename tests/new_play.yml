@@ -1,4 +1,6 @@
 ---
+- hosts: localhost
+
 - name: echo hostname 
   shell: echo "hostname"
 
