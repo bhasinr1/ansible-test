@@ -1,5 +1,5 @@
 ---
-- hosts: All
+- hosts: ansibleserver
   tasks:
       - name: echo hostname 
         shell: echo "hostname"
