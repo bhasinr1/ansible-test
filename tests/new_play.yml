@@ -3,10 +3,12 @@
   tasks:
       - name: echo hostname 
         shell: echo "hostname"
-        register: hstname        
+        register: hstnameT       
+      - set_fact: hstname="{{ hstnameT }}"  
       - debug: var={{ hstname }}
 
       - name: save in tmp folder
         shell: echo "ifconfig" 
-        register: ipcfg        
+        register: ipcfgT        
+      - set_fact: ipcfg="{{ ipcfgT }}"        
       - debug: var={{ ipcfg }}
