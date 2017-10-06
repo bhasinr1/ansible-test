@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: 10.1.11.23
   tasks:
       - name: echo hostname 
         shell: hostname
