@@ -1,0 +1,6 @@
+---
+- name: echo hostname 
+  shell: echo "hostname"
+
+- name: save in tmp folder
+  shell: echo "hostname" > /tmp/chk.out
