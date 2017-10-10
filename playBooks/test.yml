@@ -1,6 +1,13 @@
 ---
 - hosts: localhost
   tasks:
+   
+      - name: echo IP 
+        shell: ifconfig
+        register: hstnameT1       
+      - set_fact: hstIP="{{ hstnameT1 }}"  
+      - debug: var=hstIP
+  
       - name: echo hostname 
         shell: echo {{ variable1 }}
         register: hstnameT       
