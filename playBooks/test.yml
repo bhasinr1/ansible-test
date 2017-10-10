@@ -2,13 +2,13 @@
 - hosts: localhost
   tasks:
       - name: echo hostname 
-        shell: echo "variable1"
+        shell: echo {{ variable1 }}
         register: hstnameT       
       - set_fact: hstname="{{ hstnameT }}"  
       - debug: var=hstname
 
       - name: save in tmp folder
-        shell: echo "variable2"
+        shell: echo {{ variable2 }}
         register: ipcfgT        
       - set_fact: ipcfg="{{ ipcfgT }}"        
       - debug: var=ipcfg
