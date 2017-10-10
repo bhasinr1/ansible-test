@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: {{ host_nam }}
   tasks:
    
       - name: echo IP 
