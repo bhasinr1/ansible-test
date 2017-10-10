@@ -1,9 +1,14 @@
 ---
 - hosts: localhost
-  remote_user: root
-  become: yes
-  vars:
-    user: root
-    group: root
-  roles:
-    - futurice.cassandra
+  tasks:
+      - name: echo hostname 
+        shell: echo "variable1"
+        register: hstnameT       
+      - set_fact: hstname="{{ hstnameT }}"  
+      - debug: var=hstname
+
+      - name: save in tmp folder
+        shell: echo "variable2"
+        register: ipcfgT        
+      - set_fact: ipcfg="{{ ipcfgT }}"        
+      - debug: var=ipcfg
